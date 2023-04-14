@@ -19,6 +19,7 @@
     include_once('config.php');
 
      $nome = $_POST['nome'];
+     $senha = $_POST['senha'];
      $email = $_POST['email'];
      $telefone = $_POST['telefone'];
      $sexo = $_POST['genero'];
@@ -27,8 +28,10 @@
      $estado = $_POST['estado'];
      $endereco = $_POST['endereco'];
 
-     $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, email, telefone, sexo, data_nasc, cidade, estado, endereco)
-     VALUES ('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
+     $result = mysqli_query($conexao, "INSERT INTO usuarios(nome, senha, email, telefone, sexo, data_nasc, cidade, estado, endereco)
+     VALUES ('$nome','$senha','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
+
+    header('Location: login.php');
   }
 ?>
 
@@ -44,6 +47,7 @@
 </head>
 
 <body class="form">
+  <a href="home.php">Voltar</a>
   <div class="box">
     <form action="formulario.php" method="POST">
       <fieldset>
@@ -52,6 +56,11 @@
         <div class="innput-box">
           <input type="text" name="nome" id="nome" class="innput-user" required>
           <label for="nome" class="label-inpput">Nome completo</label>
+        </div>
+        <br><br>
+        <div class="innput-box">
+          <input type="password" name="senha" id="senha" class="innput-user" required>
+          <label for="senha" class="label-inpput">Digite a senha</label>
         </div>
         <br><br>
         <div class="innput-box">

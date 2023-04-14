@@ -16,24 +16,8 @@ input.login {
   font-size: 15px;
 }
 
-button.login {
-  background-color: dodgerblue;
-  border: none;
-  padding: 15px;
-  width: 100%;
-  border-radius: 10px;
-  color: white;
-}
-
-button:hover {
-  background-color: aquamarine;
-  color: black;
-  font-weight: 700;
-  cursor: pointer;
-}
-
 /* CSS para o formulário */
-body.form {
+body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(15, 54, 71));
 }
