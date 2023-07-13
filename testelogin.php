@@ -20,10 +20,10 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
 
   if(mysqli_num_rows($result) < 1)
   {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
+    //unset($_SESSION['email']);
+    //unset($_SESSION['senha']);
     //print_r('Não existe');
-    header('Location: login.php');
+    echo "<p>Login inválido.</p>";
   }
   else
   {
