@@ -43,6 +43,11 @@ body {
       <br><br>
       <input type="submit" name="submit" class="nova-classe" value="Enviar">
     </form>
+    <?php
+    if (isset($_GET['erro']) && $_GET['erro'] == 'invalido') {
+    echo '<p class="erro">Login inválido.</p>';
+    }
+    ?>
   </div>
 </body>
 

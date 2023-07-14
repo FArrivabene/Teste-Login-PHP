@@ -23,14 +23,14 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
     //unset($_SESSION['email']);
     //unset($_SESSION['senha']);
     //print_r('Não existe');
-    echo "<p>Login inválido.</p>";
+    header('location: login.php?erro=invalido');
   }
   else
   {
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
     //print_r('Existe');
-    header('Location: sistema.php');
+    header('location: sistema.php');
   }
 }
 else
